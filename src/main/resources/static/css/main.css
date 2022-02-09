@@ -1,0 +1,21 @@
+input {}
+input:focus {outline: none;}
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none;}
+#excel {display: flex;flex-direction: column;}
+#excel .classTitle {text-align: center;font-size: 5vw;}
+#excel #excelTable {border: 1px black solid;border-collapse: collapse;position: relative;width: 100%;}
+#excel #excelTable th, #excel #excelTable td {border: 1px black solid;padding: 10px;}
+#excel #excelTable td:focus-within {border-width: 3px;}
+#excel #excelTable .tableCell {width: 100%;font-size: 20px;border: none;}
+#excel #excelTable .tableCell:focus {outline: none;}
+#excel #notice {border: 1px black solid;border-collapse: collapse;position: relative;width: 100%;}
+#excel #notice th, #excel #notice td {border: 1px black solid;padding: 10px;}
+#excel #notice td:focus-within {border-width: 3px;}
+#excel #notice .tableCell {width: 100%;font-size: 20px;border: none;}
+#excel #notice .tableCell:focus {outline: none;}
+.table {display: flex;}
+.tableButton {margin-top: auto;width: 44px;height: 44px;}
+
+#totalTable table {border: 1px black solid;border-collapse: collapse;position: relative;width: 100%;}
+#totalTable table tr {border: 1px black solid;padding: 10px;}
+#totalTable table td {width: 25%;font-size: 20px;border: 1px black solid;padding: 10px;}

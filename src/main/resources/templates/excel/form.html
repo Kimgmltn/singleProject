@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <link th:href="@{/css/main.css}" rel="stylesheet" href="/static/css/main.css">
+    <script th:src="@{/js/main.js}" type="text/javascript" src="/static/js/main.js" defer></script>
+
+    <div id="excel">
+        <div>
+            <select id="year">
+                <option value="">==선택==</option>
+            </select>년
+            <select id="month">
+                <option value="">==선택==</option>
+            </select>월
+            비발디 숙녀회 결산서
+        </div>
+        <ol>
+            <li>
+                날짜 : 
+                <span id="month2"></span>월 
+                <select id="date">
+                    <option value="0">==선택==</option>
+                </select>일
+            </li>
+            <li>장소 : <input type="text"></li>
+            <li>참석인원 : <input type="number" name="totalAttend">명</li>
+            <li>불참명단 : <input type="text" name="noAttend"></li>
+        </ol>
+        <div class="classTitle">회계보고</div>
+        <div class="table">
+            <table id="excelTable">
+                <thead>
+                    <th>내역서</th>
+                    <th>수입</th>
+                    <th>지출</th>
+                    <th>잔액</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="tableCell" name="content"></td>
+                        <td><input type="number" class="tableCell" name="income"></td>
+                        <td><input type="number" class="tableCell" name="expenditure"></td>
+                        <td><input type="number" class="tableCell" name="balance"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button class="tableButton" onclick='addRow("excelTable")'>+</button>
+            <button class="tableButton" onclick='deleteRow("excelTable", -1)'>-</button>
+        </div>
+        <div id="totalTable">
+            <table>
+                <tr>
+                    <td>총 합</td>
+                    <td id="totalIncome"></td>
+                    <td id="totalExpenditure"></td>
+                    <td id="totalBalance"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="classTitle">알림</div>
+        <div class="table">
+            <table id="notice">
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="tableCell"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button class="tableButton" onclick='addNotice("notice")'>+</button>
+            <button class="tableButton" onclick='deleteRow("notice", -1)'>-</button>
+        </div>
+    </div>
+</body>
+
+</html>
